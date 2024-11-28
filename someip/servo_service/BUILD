@@ -1,5 +1,5 @@
 filegroup(
-    name = "logger_service_someipy",
+    name = "service_someipy",
     srcs = [
         "service.json",
     ],
