@@ -30,3 +30,8 @@
 *.exe
 *.out
 *.app
+
+bazel-*
+.vscode
+MODULE.bazel.lock
+coverage-report
