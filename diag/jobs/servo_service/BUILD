@@ -15,3 +15,12 @@ filegroup(
     ],
     visibility = ["//visibility:public"],
 )
+
+filegroup(
+    name = "basic_servo_job",
+    srcs = [
+        "basic_did.json",
+        "//deployment/system_definition/diag/global:diag_dids",
+    ],
+    visibility = ["//visibility:public"],
+)
