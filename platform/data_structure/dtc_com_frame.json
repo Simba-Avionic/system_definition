@@ -1,0 +1,10 @@
+{
+    "package": "simba.platform.diag",
+    "data_structure": {
+        "DtcComDataStructure": {
+            "dtc_id": "uint32",
+            "type": "uint8",
+            "parm": "uint8"
+        }
+    }
+}
