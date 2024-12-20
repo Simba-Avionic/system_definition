@@ -1,0 +1,24 @@
+{
+    "include":[
+        "deployment/system_definition/someip/fc/gps_service/gps_data_type.json"
+    ],
+    "package":"simba.apps",
+    "someip":{
+        "GPSService":{
+            "service_id":519,
+            "major_version":1,
+            "minor_version":0,
+            "methods":{},
+            "events":{
+                "GPSStatusEvent": {
+                    "id":32769,
+                    "data_structure":{
+                        "out":{
+                            "type":"GPSDataStructure"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
