@@ -44,7 +44,7 @@ def load_json(filename: str):
         someip_data = data.get("someip", {})
         if not someip_data:
             logging.error(f"No 'someip' key found in file {filename}")
-            exit(1)
+            return None, None
 
         # Extract the first service (e.g., "ServoService")
         service_name = next(iter(someip_data.keys()))
@@ -89,4 +89,5 @@ if __name__ == "__main__":
     for json_file in json_files:
         logging.info(f"Processing file: {json_file}")
         service_id, entity = load_json(json_file)
-        db.add_to_db(service_id, entity)
+        if (service_id is not None and entity is not None):
+            db.add_to_db(service_id, entity)
