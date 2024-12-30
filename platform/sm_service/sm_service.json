@@ -1,0 +1,45 @@
+{
+    "include":[],
+    "package":"simba.platform.sm",
+    "someip":{
+        "StateManager":{
+            "service_id": 1,
+            "major_version":1,
+            "minor_version":0,
+            "methods":{
+                "SetState":{
+                    "id":1,
+                    "data_structure":{
+                        "in":{
+                            "type":"uint16"
+                        },
+                        "out":{
+                            "type":"void"
+                        }
+                    }
+                },
+                "GetState":{
+                    "id":2,
+                    "data_structure":{
+                        "in":{
+                            "type":"void"
+                        },
+                        "out":{
+                            "type":"uint16"
+                        }
+                    }
+                }
+            },
+            "events":{
+                "CurrentState": {
+                    "id":32769,
+                    "data_structure":{
+                        "out":{
+                            "type":"uint16"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
