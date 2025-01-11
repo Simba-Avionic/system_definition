@@ -1,6 +1,6 @@
 {
     "include":[],
-    "package":"simba.platform.sm",
+    "package":"srp.platform.sm",
     "someip":{
         "StateManager":{
             "service_id": 1,

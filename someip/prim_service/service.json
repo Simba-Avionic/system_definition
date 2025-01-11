@@ -1,6 +1,6 @@
 {
     "include":[],
-    "package":"simba.apps",
+    "package":"srp.apps",
     "someip":{
         "PrimerService":{
             "service_id":516,

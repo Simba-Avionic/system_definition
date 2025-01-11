@@ -1,6 +1,6 @@
 {
     "include":[],
-    "package":"simba.env",
+    "package":"srp.env",
     "someip":{
         "EnvApp":{
             "service_id":514,

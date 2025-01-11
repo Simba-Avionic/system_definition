@@ -1,5 +1,5 @@
 {
-    "package": "simba.platform.sm",
+    "package": "srp.platform.sm",
     "states": {
         "Startup": {
             "AfterFinish": {

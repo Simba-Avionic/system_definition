@@ -1,5 +1,5 @@
 {
-    "package":"simba.apps",
+    "package":"srp.apps",
     "data_structure":{
         "GPSDataStructure":{
             "lattitude": "float32",

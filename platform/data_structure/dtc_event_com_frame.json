@@ -1,5 +1,5 @@
 {
-    "package": "simba.platform.diag",
+    "package": "srp.platform.diag",
     "data_structure": {
         "DtcEventComDataStructure": {
             "dtc_id": "uint32",

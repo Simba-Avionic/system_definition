@@ -1,6 +1,6 @@
 {
     "include":[],
-    "package":"simba.apps",
+    "package":"srp.apps",
     "someip":{
         "ServoService":{
             "service_id":515,
