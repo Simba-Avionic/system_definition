@@ -15,7 +15,7 @@
         },
         "Startup2": {
             "AfterFinish": {
-                "switch": "Platform"
+                "switch": "Running"
             },
             "Error": {
                 "switch": "Platform"
@@ -26,9 +26,6 @@
             }
         },
         "Platform": {
-            "AfterFinish": {
-                "switch": "Running"
-            },
             "Error": {
                 "switch": "SafetyMode"
             },
