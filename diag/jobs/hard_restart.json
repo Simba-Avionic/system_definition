@@ -1,6 +1,6 @@
 {
     "include": [
-        "deployment/system_definition/diag/global/restart.json"
+        "@(srp_platform)/platform_definition/diag/global/restart.json"
     ],
     "diag": {
         "job": {

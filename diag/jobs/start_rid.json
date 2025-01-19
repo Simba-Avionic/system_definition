@@ -1,6 +1,6 @@
 {
     "include": [
-        "deployment/system_definition/diag/global/rid.json"
+        "@(srp_platform)/platform_definition/diag/global/rid.json"
     ],
     "diag": {
         "job": {
