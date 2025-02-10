@@ -2,7 +2,7 @@
     "package":"srp.apps",
     "data_structure":{
         "GPSDataStructure":{
-            "lattitude": "float32",
+            "latitude": "float32",
             "longitude":"float32"
         }
     }
