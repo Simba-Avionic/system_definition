@@ -9,3 +9,13 @@ filegroup(
     srcs = ["ntp_com_frame.json"],
     visibility = ["//visibility:public"],
 )
+filegroup(
+    name = "gpio_data_structure",
+    srcs = ["gpio_com_frame.json"],
+    visibility = ["//visibility:public"],
+)
+filegroup(
+    name = "temp_data_structure",
+    srcs = ["temp_sub_com_frame.json", "temp_read_com_frame.json"],
+    visibility = ["//visibility:public"],
+)

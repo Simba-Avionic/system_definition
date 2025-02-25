@@ -1,0 +1,10 @@
+{
+    "package": "srp.mw.gpio",
+    "data_structure": {
+        "GpioHdr": {
+            "action": "uint8",
+            "pin_id": "uint8",
+            "value": "uint8"
+        }
+    }
+}

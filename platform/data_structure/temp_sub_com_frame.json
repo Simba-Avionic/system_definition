@@ -1,0 +1,8 @@
+{
+    "package": "srp.mw.temp",
+    "data_structure": {
+        "TempSubHdr": {
+            "service_id": "uint16"
+        }
+    }
+}
