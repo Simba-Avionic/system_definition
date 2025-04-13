@@ -1,0 +1,14 @@
+{
+    "include":[],
+    "package":"srp.apps",
+    "someip":{
+        "RadioService":{
+            "service_id":530,
+            "major_version":1,
+            "minor_version":0,
+            "methods":{},
+            "events":{}
+            }
+        }
+    }
+
