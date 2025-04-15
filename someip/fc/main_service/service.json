@@ -1,0 +1,35 @@
+{
+    "include":[
+    ],
+    "package":"srp.apps",
+    "someip":{
+        "MainService":{
+            "service_id":521,
+            "major_version":1,
+            "minor_version":0,
+            "methods":{
+                "setMode":{
+                    "id":1,
+                    "data_structure":{
+                        "in":{
+                            "type":"uint8"
+                        },
+                        "out":{
+                            "type":"bool"
+                        }
+                    }
+                }
+            },
+            "events":{
+                "CurrentModeStatusEvent": {
+                    "id":32769,
+                    "data_structure":{
+                        "out":{
+                            "type":"uint8"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
