@@ -1,0 +1,23 @@
+name: System Definition Checker
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  check-system-definition:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      # 4. Run checker script
+      - name: Run Confession Checker
+        run: python3 tool/confession_checker/checker.py
