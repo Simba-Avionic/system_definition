@@ -1,0 +1,9 @@
+{
+    "package":"srp.apps",
+    "data_structure":{
+        "PressCalibrationRes":{
+            "a": "float32",
+            "b":"float32"
+        }
+    }
+}
