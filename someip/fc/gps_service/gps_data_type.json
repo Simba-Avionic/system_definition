@@ -3,7 +3,8 @@
     "data_structure":{
         "GPSDataStructure":{
             "latitude": "float32",
-            "longitude":"float32"
+            "longitude":"float32",
+            "altitude": "float32"
         }
     }
 }
