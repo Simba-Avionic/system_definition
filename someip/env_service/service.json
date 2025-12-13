@@ -50,7 +50,7 @@
                     "id":32772,
                     "data_structure":{
                         "out":{
-                            "type":"int16"
+                            "type":"uint16"
                         }
                     }
                 }
