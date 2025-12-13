@@ -1,0 +1,13 @@
+{
+    "include": [
+        "@(srp_platform)/platform_definition/diag/global/did.json"
+    ],
+    "diag": {
+        "job": {
+            "DumpServoStatusDiD": {
+                "type": "did",
+                "sub_service_id": 18
+            }
+        }
+    }
+}

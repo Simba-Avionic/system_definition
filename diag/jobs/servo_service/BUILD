@@ -24,3 +24,12 @@ filegroup(
     ],
     visibility = ["//visibility:public"],
 )
+
+filegroup(
+    name = "dump_servo_status_job",
+    srcs = [
+        "dump_servo_status_did.json",
+        "@srp_platform//platform_definition/diag/global:diag_dids",
+    ],
+    visibility = ["//visibility:public"],
+)
