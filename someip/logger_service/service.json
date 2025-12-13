@@ -29,6 +29,16 @@
                         }
                     }
                 }
+            },
+            "events":{
+                "LoggingState": {
+                    "id":32769,
+                    "data_structure":{
+                        "out":{
+                            "type":"uint8"
+                        }
+                    }
+                }
             }
         }
     }
