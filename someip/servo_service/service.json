@@ -29,7 +29,8 @@
                             "type":"uint8"
                         }
                     }
-                }, "SetVentServoValue":{
+                },
+                "SetVentServoValue":{
                     "id":3,
                     "data_structure":{
                         "in":{
@@ -51,6 +52,29 @@
                             "type":"uint8"
                         }
                     }
+                },
+                "SetDumpValue":{
+                    "id":5,
+                    "data_structure":{
+                        "in":{
+                            "name": "pos",
+                            "type":"uint8"
+                        },
+                        "out":{
+                            "type":"bool"
+                        }
+                    }
+                },
+                "ReadDumpValue":{
+                    "id":6,
+                    "data_structure":{
+                        "in":{
+                            "type":"void"
+                        },
+                        "out":{
+                            "type":"uint8"
+                        }
+                    }
                 }
             },
             "events":{
@@ -64,6 +88,14 @@
                 },
                 "ServoVentStatusEvent": {
                     "id":32770,
+                    "data_structure":{
+                        "out":{
+                            "type":"uint8"
+                        }
+                    }
+                },
+                "ServoDumpStatusEvent": {
+                    "id":32771,
                     "data_structure":{
                         "out":{
                             "type":"uint8"
