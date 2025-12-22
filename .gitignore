@@ -35,3 +35,8 @@ bazel-*
 .vscode
 MODULE.bazel.lock
 coverage-report
+*.pyc
+/__pycache__/*
+/__pycache__/
+.idea
+.idea/*

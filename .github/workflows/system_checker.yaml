@@ -7,6 +7,7 @@ on:
   pull_request:
     branches:
       - master
+  merge_group:
 
 jobs:
   check-system-definition:
@@ -18,6 +19,8 @@ jobs:
         with:
           submodules: recursive
 
-      # 4. Run checker script
+      - name: Verify Confession checker
+        run: python3 -m tool.test.test_confession_checker
+
       - name: Run Confession Checker
-        run: python3 tool/confession_checker/checker.py
+        run: python3 -m tool.confession_checker.checker
