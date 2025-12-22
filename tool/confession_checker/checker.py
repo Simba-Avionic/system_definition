@@ -2,7 +2,7 @@ import os
 import json
 import logging
 import sys
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Tuple
 
 
 class SomeIpEntity:
@@ -16,8 +16,8 @@ class SomeIpEntity:
 class DiagEntity:
     def __init__(self, name: str):
         self.name = name
-        self.jobs: Dict[int, str] = {}
-        self.dtcs: Dict[int, str] = {}
+        self.jobs: Dict[int, Tuple[str, Optional[str]]] = {}
+        self.dtcs: Dict[int, Tuple[str, Optional[str]]] = {}
 
 
 class DataBase:
@@ -25,8 +25,8 @@ class DataBase:
         self.someip_db: Dict[int, SomeIpEntity] = {}
         self.diag_entities: List[DiagEntity] = []
 
-        self.global_diag_job_ids: Dict[int, str] = {}
-        self.global_diag_dtc_ids: Dict[int, str] = {}
+        self.global_diag_job_ids: Dict[int, List[Tuple[str, Optional[str]]]] = {}
+        self.global_diag_dtc_ids: Dict[int, List[Tuple[str, Optional[str]]]] = {}
 
     def add_someip_entity(self, entity: SomeIpEntity):
         if entity.service_id in self.someip_db:
@@ -40,21 +40,35 @@ class DataBase:
         self.someip_db[entity.service_id] = entity
 
     def add_diag_entity(self, entity: DiagEntity):
-        for job_id, job_name in entity.jobs.items():
-            if job_id in self.global_diag_job_ids:
-                prev_name = self.global_diag_job_ids[job_id]
-                error_msg = f"Duplicate Diag Job ID {job_id}: '{job_name}' conflicts with '{prev_name}'"
-                logging.error(error_msg)
-                raise ValueError(error_msg)
-            self.global_diag_job_ids[job_id] = job_name
+        for job_id, (job_name, job_type) in entity.jobs.items():
+            if job_id not in self.global_diag_job_ids:
+                self.global_diag_job_ids[job_id] = []
 
-        for dtc_id, dtc_name in entity.dtcs.items():
-            if dtc_id in self.global_diag_dtc_ids:
-                prev_name = self.global_diag_dtc_ids[dtc_id]
-                error_msg = f"Duplicate Diag DTC ID {dtc_id}: '{dtc_name}' conflicts with '{prev_name}'"
-                logging.error(error_msg)
-                raise ValueError(error_msg)
-            self.global_diag_dtc_ids[dtc_id] = dtc_name
+            for prev_name, prev_type in self.global_diag_job_ids[job_id]:
+                if prev_type == job_type:
+                    error_msg = (
+                        f"Duplicate Diag Job ID {job_id} (Type: {job_type}): "
+                        f"'{job_name}' conflicts with '{prev_name}'"
+                    )
+                    logging.error(error_msg)
+                    raise ValueError(error_msg)
+
+            self.global_diag_job_ids[job_id].append((job_name, job_type))
+
+        for dtc_id, (dtc_name, dtc_type) in entity.dtcs.items():
+            if dtc_id not in self.global_diag_dtc_ids:
+                self.global_diag_dtc_ids[dtc_id] = []
+
+            for prev_name, prev_type in self.global_diag_dtc_ids[dtc_id]:
+                if prev_type == dtc_type:
+                    error_msg = (
+                        f"Duplicate Diag DTC ID {dtc_id} (Type: {dtc_type}): "
+                        f"'{dtc_name}' conflicts with '{prev_name}'"
+                    )
+                    logging.error(error_msg)
+                    raise ValueError(error_msg)
+
+            self.global_diag_dtc_ids[dtc_id].append((dtc_name, dtc_type))
 
         self.diag_entities.append(entity)
 
@@ -105,22 +119,30 @@ def process_diag_data(data: dict, filename: str) -> Optional[DiagEntity]:
     jobs = diag_content.get("job", {})
     for job_name, job_info in jobs.items():
         job_id = job_info.get("sub_service_id")
+        job_type = job_info.get("type")
+
         if job_id is not None:
             if job_id in entity.jobs:
-                error_msg = f"Duplicate Job ID {job_id} in file {filename}"
-                logging.error(error_msg)
-                raise ValueError(error_msg)
-            entity.jobs[job_id] = job_name
+                prev_name, prev_type = entity.jobs[job_id]
+                if prev_type == job_type:
+                    error_msg = f"Duplicate Job ID {job_id} in file {filename}"
+                    logging.error(error_msg)
+                    raise ValueError(error_msg)
+            entity.jobs[job_id] = (job_name, job_type)
 
     dtcs = diag_content.get("dtc", {})
     for dtc_name, dtc_info in dtcs.items():
         dtc_id = dtc_info.get("id")
+        dtc_type = dtc_info.get("type")
+
         if dtc_id is not None:
             if dtc_id in entity.dtcs:
-                error_msg = f"Duplicate DTC ID {dtc_id} in file {filename}"
-                logging.error(error_msg)
-                raise ValueError(error_msg)
-            entity.dtcs[dtc_id] = dtc_name
+                prev_name, prev_type = entity.dtcs[dtc_id]
+                if prev_type == dtc_type:
+                    error_msg = f"Duplicate DTC ID {dtc_id} in file {filename}"
+                    logging.error(error_msg)
+                    raise ValueError(error_msg)
+            entity.dtcs[dtc_id] = (dtc_name, dtc_type)
 
     return entity
 
@@ -129,7 +151,7 @@ def validate_directory_content(filename: str, data: dict):
     path_parts = os.path.normpath(filename).split(os.sep)
 
     if "someip" in path_parts:
-        if "someip" not in data:
+        if "someip" not in data and "data_type" not in filename:
             error_msg = f"File '{filename}' resides in a 'someip' folder but is missing the 'someip' key."
             logging.error(error_msg)
             raise ValueError(error_msg)
@@ -158,7 +180,6 @@ def load_and_parse_file(filename: str, db: DataBase):
             for entity in someip_entities:
                 db.add_someip_entity(entity)
         except ValueError as e:
-            # Note: logging is already handled inside the functions above
             raise e
 
     if "diag" in data:
@@ -167,7 +188,6 @@ def load_and_parse_file(filename: str, db: DataBase):
             if diag_entity:
                 db.add_diag_entity(diag_entity)
         except ValueError as e:
-            # Note: logging is already handled inside the functions above
             raise e
 
 
@@ -188,7 +208,6 @@ if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
     db = DataBase()
 
-    # Define the directories to scan explicitly
     target_dirs = ["./someip", "./diag"]
 
     has_error = False
