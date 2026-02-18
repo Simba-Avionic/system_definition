@@ -1,0 +1,20 @@
+{
+    "include":[],
+    "package":"srp.env",
+    "someip":{
+        "service_id": 569,
+        "major_version": 1,
+        "minor_version": 0,
+        "methods":{},
+        "events":{
+            "newPressEvent":{
+                "id": 32769,
+                "data_structure":{
+                    "out": {
+                        "type": "uint16"
+                    }
+                }
+            }
+        }
+    }
+}
