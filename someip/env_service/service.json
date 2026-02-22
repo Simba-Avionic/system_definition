@@ -53,6 +53,14 @@
                             "type":"uint16"
                         }
                     }
+                },
+                "newDPressEvent": {
+                    "id":32773,
+                    "data_structure":{
+                        "out":{
+                            "type":"uint16"
+                        }
+                    }
                 }
             }
         }
