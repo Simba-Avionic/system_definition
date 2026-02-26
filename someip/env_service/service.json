@@ -1,6 +1,5 @@
 {
     "include":[
-        "deployment/system_definition/someip/env_service/calibraction_data_type.json"
     ],
     "package":"srp.env",
     "someip":{
@@ -9,17 +8,6 @@
             "major_version":1,
             "minor_version":0,
             "methods":{
-                "calPressureSensor": {
-                    "id": 1,
-                    "data_structure": {
-                        "out": {
-                            "type":"srp.apps.PressCalibrationRes"
-                        },
-                        "in": {
-                            "type": "void"
-                        }
-                    }
-                }
             },
             "events":{
                 "newTempEvent_1": {
@@ -59,6 +47,30 @@
                     "data_structure":{
                         "out":{
                             "type":"uint16"
+                        }
+                    }
+                },
+                "newBoardTempEvent1": {
+                    "id":32774,
+                    "data_structure":{
+                        "out":{
+                            "type":"int16"
+                        }
+                    }
+                },
+                "newBoardTempEvent2": {
+                    "id":32775,
+                    "data_structure":{
+                        "out":{
+                            "type":"int16"
+                        }
+                    }
+                },
+                "newBoardTempEvent3": {
+                    "id":32776,
+                    "data_structure":{
+                        "out":{
+                            "type":"int16"
                         }
                     }
                 }
