@@ -1,0 +1,10 @@
+{
+    "package":"srp.env",
+    "data_structure":{
+        "BME280DataStructure":{
+            "temperature": "float32",
+            "humidity":"float32",
+            "altitude": "float32"
+        }
+    }
+}

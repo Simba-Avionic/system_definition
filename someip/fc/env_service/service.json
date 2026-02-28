@@ -1,17 +1,45 @@
 {
-    "include":[],
+    "include":[
+        "deployment/system_definition/someip/fc/env_service/bme280_data_type.json"
+    ],
     "package":"srp.env",
     "someip":{
-        "service_id": 569,
-        "major_version": 1,
-        "minor_version": 0,
-        "methods":{},
-        "events":{
-            "newPressEvent":{
-                "id": 32769,
-                "data_structure":{
-                    "out": {
-                        "type": "uint16"
+        "EnvAppFc":{
+            "service_id": 529,
+            "major_version": 1,
+            "minor_version": 0,
+            "methods":{},
+            "events":{
+                "newBoardTempEvent_1": {
+                    "id":32769,
+                    "data_structure":{
+                        "out":{
+                            "type":"int16"
+                        }
+                    }
+                },
+                "newBoardTempEvent_2": {
+                    "id":32770,
+                    "data_structure":{
+                        "out":{
+                           "type":"int16"
+                        }
+                    }
+                },
+                "newBoardTempEvent_3": {
+                    "id":32771,
+                    "data_structure":{
+                        "out":{
+                            "type":"int16"
+                        }
+                    }
+                },
+                "newBME280Event": {
+                    "id": 32772,
+                    "data_structure":{
+                        "out":{
+                            "type": "BME280DataStructure"
+                        }
                     }
                 }
             }
