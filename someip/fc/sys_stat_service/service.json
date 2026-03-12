@@ -1,0 +1,25 @@
+{
+    "include":[
+         "deployment/system_definition/someip/fc/sys_stat_service/sys_stat_data_type.json"
+    ],
+    "package":"srp.apps",
+    "someip":{
+        "FcSysStatService":{
+            "service_id":523,
+            "major_version":1,
+            "minor_version":0,
+            "methods":{
+            },
+            "events":{
+                "NewSystemUsage": {
+                    "id":32769,
+                    "data_structure":{
+                        "out":{
+                            "type":"srp.apps.SysStatType"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
