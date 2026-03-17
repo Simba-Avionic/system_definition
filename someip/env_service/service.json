@@ -73,6 +73,14 @@
                             "type":"int16"
                         }
                     }
+                },
+                "newTensoEvent": {
+                    "id":32777,
+                    "data_structure":{
+                        "out":{
+                            "type":"float32"
+                        }
+                    }
                 }
             }
         }
