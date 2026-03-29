@@ -5,7 +5,8 @@
             "action": "uint8",
             "pin_id": "uint8",
             "value": "uint8",
-            "time_period": "uint16"
+            "time_period": "uint16",
+            "force_time_period": "bool"
         }
     }
 }
