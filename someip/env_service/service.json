@@ -8,6 +8,39 @@
             "major_version":1,
             "minor_version":0,
             "methods":{
+                "GetTankPressure": {
+                    "id":1,
+                    "data_structure": {
+                        "in":{
+                            "type":"void"
+                        },
+                        "out":{
+                            "type":"uint16"
+                        }
+                    }
+                },
+                "GetUpperTankTemp": {
+                    "id":2,
+                    "data_structure": {
+                        "in":{
+                            "type":"void"
+                        },
+                        "out":{
+                            "type":"uint16"
+                        }
+                    }
+                },
+                "GetLowerTankTemp": {
+                    "id":3,
+                    "data_structure": {
+                        "in":{
+                            "type":"void"
+                        },
+                        "out":{
+                            "type":"uint16"
+                        }
+                    }
+                }
             },
             "events":{
                 "newTempEvent_1": {

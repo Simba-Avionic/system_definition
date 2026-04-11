@@ -28,6 +28,17 @@
                             "type":"bool"
                         }
                     }
+                },
+                "GetMode": {
+                    "id":3,
+                    "data_structure": {
+                        "in":{
+                            "type":"void"
+                        },
+                        "out":{
+                            "type":"uint8"
+                        }
+                    }
                 }
             },
             "events":{
