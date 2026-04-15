@@ -39,6 +39,17 @@
                             "type":"bool"
                         }
                     }
+                },
+                "GetPrimerState":{
+                    "id":4,
+                    "data_structure":{
+                        "in": {
+                            "type":"void"
+                        },
+                        "out":{
+                            "type":"uint8"
+                        }
+                    }
                 }
             },
             "events":{
