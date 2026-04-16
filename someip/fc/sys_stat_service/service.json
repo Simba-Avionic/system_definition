@@ -15,7 +15,7 @@
                     "id":32769,
                     "data_structure":{
                         "out":{
-                            "type":"srp.apps.SysStatType"
+                            "type":"srp.apps.FcSysStatType"
                         }
                     }
                 }
