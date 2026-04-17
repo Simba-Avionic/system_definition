@@ -39,11 +39,30 @@
                             "type":"uint8"
                         }
                     }
+                },
+                "SetVentValve": {
+                    "id":4,
+                    "data_structure": {
+                        "in":{
+                            "type":"uint8"
+                        },
+                        "out":{
+                            "type":"void"
+                        }
+                    }
                 }
             },
             "events":{
                 "CurrentMode": {
                     "id":32769,
+                    "data_structure":{
+                        "out":{
+                            "type":"uint8"
+                        }
+                    }
+                },
+                "NewVentValveStatus": {
+                    "id":32770,
                     "data_structure":{
                         "out":{
                             "type":"uint8"
