@@ -1,0 +1,45 @@
+{
+    "include": [],
+    "package": "srp.apps",
+    "someip": {
+        "FcFileLoggerApp": {
+            "service_id": 531,
+            "major_version": 1,
+            "minor_version": 0,
+            "methods": {
+                "Start": {
+                    "id": 1,
+                    "data_structure": {
+                        "in": {
+                            "type": "void"
+                        },
+                        "out": {
+                            "type": "bool"
+                        }
+                    }
+                },
+                "Stop": {
+                    "id": 2,
+                    "data_structure": {
+                        "in": {
+                            "type": "void"
+                        },
+                        "out": {
+                            "type": "bool"
+                        }
+                    }
+                }
+            },
+            "events": {
+                "LoggingState": {
+                    "id": 32769,
+                    "data_structure": {
+                        "out": {
+                            "type": "uint8"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
