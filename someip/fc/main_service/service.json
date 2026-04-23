@@ -29,6 +29,14 @@
                         }
                     }
                 }
+            },
+            "NewHBStatus": {
+                "id":32770,
+                "data_structure":{
+                    "out":{
+                        "type":"uint16"
+                    }
+                }
             }
         }
     }

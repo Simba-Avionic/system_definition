@@ -68,6 +68,14 @@
                             "type":"uint8"
                         }
                     }
+                },
+                "NewHBStatus": {
+                    "id":32771,
+                    "data_structure":{
+                        "out":{
+                            "type":"uint16"
+                        }
+                    }
                 }
             }
         }

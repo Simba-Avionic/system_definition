@@ -19,3 +19,8 @@ filegroup(
     srcs = ["temp_sub_com_frame.json", "temp_read_com_frame.json"],
     visibility = ["//visibility:public"],
 )
+filegroup(
+    name = "hb_data_structure",
+    srcs = ["hb_data_frame.json"],
+    visibility = ["//visibility:public"],
+)

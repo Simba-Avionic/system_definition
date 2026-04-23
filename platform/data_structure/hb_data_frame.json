@@ -1,0 +1,8 @@
+{
+    "package": "srp.core.hb",
+    "data_structure": {
+        "HBHeader": {
+            "service_id": "uint16"
+        }
+    }
+}
