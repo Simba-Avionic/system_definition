@@ -1,0 +1,9 @@
+{
+    "package":"srp.apps",
+    "data_structure":{
+        "GPSVTGDataStructure":{
+            "trueCourse": "float32",
+            "relativeSpeed": "float32"
+        }
+    }
+}
