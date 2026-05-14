@@ -1,0 +1,14 @@
+{
+    "package":"srp.apps",
+    "data_structure":{
+        "RadioDataType":{
+            "rxerrors": "uint16",
+            "fixed": "uint16",
+            "rssi": "uint8",
+            "remrssi": "uint8",
+            "txbuf": "uint8",
+            "noise": "uint8",
+            "remnoise": "uint8"  
+        }
+    }
+}

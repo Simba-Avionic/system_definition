@@ -1,0 +1,24 @@
+{
+    "include":[
+        "deployment/system_definition/someip/radio_service/radio_data_type.json"
+    ],
+    "package":"srp.apps",
+    "someip":{
+        "FcRadioService":{
+            "service_id":545,
+            "major_version":1,
+            "minor_version":0,
+            "methods":{},
+            "events":{
+                 "RadioStatusEvent": {
+                    "id":32769,
+                    "data_structure":{
+                        "out":{
+                            "type":"RadioDataType"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
