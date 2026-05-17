@@ -1,0 +1,13 @@
+{
+    "package": "srp.env",
+    "data_structure": {
+        "IMUDataStructure": {
+            "gyroscope_x": "float32",
+            "gyroscope_y": "float32",
+            "gyroscope_z": "float32",
+            "accel_x": "float32",
+            "accel_y": "float32",
+            "accel_z": "float32"
+        }
+    }
+}

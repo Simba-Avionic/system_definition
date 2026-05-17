@@ -15,6 +15,14 @@
                             "type": "bool"
                         }
                     }
+                },
+                "newMainParachuteDetected": {
+                    "id": 32770,
+                    "data_structure": {
+                        "out": {
+                            "type": "bool"
+                        }
+                    }
                 }
             }
         }
