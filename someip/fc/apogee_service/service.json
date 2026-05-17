@@ -1,0 +1,22 @@
+{
+    "include": [],
+    "package": "srp.apps",
+    "someip": {
+        "ApogeeDetectService": {
+            "service_id": 555,
+            "major_version": 1,
+            "minor_version": 0,
+            "methods": {},
+            "events": {
+                "newApogeeDetected": {
+                    "id": 32769,
+                    "data_structure": {
+                        "out": {
+                            "type": "bool"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
