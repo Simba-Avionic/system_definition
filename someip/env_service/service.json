@@ -1,5 +1,6 @@
 {
     "include":[
+       "deployment/system_definition/someip/env_service/sensor_read_type.json"
     ],
     "package":"srp.env",
     "someip":{
@@ -7,111 +8,13 @@
             "service_id":514,
             "major_version":1,
             "minor_version":0,
-            "methods":{
-                "GetTankPressure": {
-                    "id":1,
-                    "data_structure": {
-                        "in":{
-                            "type":"void"
-                        },
-                        "out":{
-                            "type":"uint16"
-                        }
-                    }
-                },
-                "GetUpperTankTemp": {
-                    "id":2,
-                    "data_structure": {
-                        "in":{
-                            "type":"void"
-                        },
-                        "out":{
-                            "type":"uint16"
-                        }
-                    }
-                },
-                "GetLowerTankTemp": {
-                    "id":3,
-                    "data_structure": {
-                        "in":{
-                            "type":"void"
-                        },
-                        "out":{
-                            "type":"uint16"
-                        }
-                    }
-                }
-            },
+            "methods":{},
             "events":{
-                "newTempEvent_1": {
+                "newSensorReadEvent": {
                     "id":32769,
                     "data_structure":{
                         "out":{
-                            "type":"int16"
-                        }
-                    }
-                },
-                "newTempEvent_2": {
-                    "id":32770,
-                    "data_structure":{
-                        "out":{
-                           "type":"int16"
-                        }
-                    }
-                },
-                "newTempEvent_3": {
-                    "id":32771,
-                    "data_structure":{
-                        "out":{
-                            "type":"int16"
-                        }
-                    }
-                },
-                "newPressEvent": {
-                    "id":32772,
-                    "data_structure":{
-                        "out":{
-                            "type":"uint16"
-                        }
-                    }
-                },
-                "newDPressEvent": {
-                    "id":32773,
-                    "data_structure":{
-                        "out":{
-                            "type":"uint16"
-                        }
-                    }
-                },
-                "newBoardTempEvent1": {
-                    "id":32774,
-                    "data_structure":{
-                        "out":{
-                            "type":"int16"
-                        }
-                    }
-                },
-                "newBoardTempEvent2": {
-                    "id":32775,
-                    "data_structure":{
-                        "out":{
-                            "type":"int16"
-                        }
-                    }
-                },
-                "newBoardTempEvent3": {
-                    "id":32776,
-                    "data_structure":{
-                        "out":{
-                            "type":"int16"
-                        }
-                    }
-                },
-                "newTensoEvent": {
-                    "id":32777,
-                    "data_structure":{
-                        "out":{
-                            "type":"float32"
+                            "type":"srp.apps.SensorDataStructure"
                         }
                     }
                 }
