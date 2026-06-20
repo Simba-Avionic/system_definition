@@ -1,7 +1,5 @@
 {
-    "include":[
-        "deployment/system_definition/someip/servo_service/servo_data_type.json"
-    ],
+    "include":[],
     "package":"srp.apps",
     "someip":{
         "ServoService":{

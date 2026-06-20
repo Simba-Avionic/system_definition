@@ -1,9 +1,5 @@
 {
-    "include":[
-        "deployment/system_definition/someip/fc/gps_service/gps_data_type.json",
-        "deployment/system_definition/someip/fc/gps_service/gps_rmc_data_type.json",
-        "deployment/system_definition/someip/fc/gps_service/gps_vtg_data_type.json"
-    ],
+    "include":[],
     "package":"srp.apps",
     "someip":{
         "GPSService":{

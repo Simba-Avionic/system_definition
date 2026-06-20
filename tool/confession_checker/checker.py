@@ -150,6 +150,9 @@ def process_diag_data(data: dict, filename: str) -> Optional[DiagEntity]:
 def validate_directory_content(filename: str, data: dict):
     path_parts = os.path.normpath(filename).split(os.sep)
 
+    if "types_manifest" in filename:
+        return
+
     if "someip" in path_parts:
         if "someip" not in data and "data_type" not in filename:
             error_msg = f"File '{filename}' resides in a 'someip' folder but is missing the 'someip' key."

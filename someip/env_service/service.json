@@ -1,7 +1,5 @@
 {
-    "include":[
-       "deployment/system_definition/someip/env_service/sensor_read_data_type.json"
-    ],
+    "include":[],
     "package":"srp.env",
     "someip":{
         "EnvApp":{
