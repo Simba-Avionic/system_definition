@@ -1,0 +1,9 @@
+{
+    "package":"srp.apps",
+    "data_structure":{
+        "ServoDataStructure":{
+            "actuator_id": "uint8",
+            "position":"uint8"
+        }
+    }
+}

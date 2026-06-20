@@ -1,6 +1,6 @@
 {
     "include":[
-       "deployment/system_definition/someip/env_service/sensor_read_type.json"
+       "deployment/system_definition/someip/env_service/sensor_read_data_type.json"
     ],
     "package":"srp.env",
     "someip":{
