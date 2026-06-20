@@ -1,8 +1,5 @@
 {
-    "include": [
-        "deployment/system_definition/someip/fc/env_service/bme280_data_type.json",
-        "deployment/system_definition/someip/fc/env_service/lsm6dox_data_type.json"
-    ],
+    "include": [],
     "package": "srp.env",
     "someip": {
         "EnvAppFc": {

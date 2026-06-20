@@ -1,15 +1,12 @@
 {
-    "include":[
-         "deployment/system_definition/someip/sys_stat_service/sys_stat_data_type.json"
-    ],
+    "include":[],
     "package":"srp.apps",
     "someip":{
         "SysStatService":{
             "service_id":522,
             "major_version":1,
             "minor_version":0,
-            "methods":{
-            },
+            "methods":{},
             "events":{
                 "NewSystemUsage": {
                     "id":32769,

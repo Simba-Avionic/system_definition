@@ -1,7 +1,5 @@
 {
-    "include":[
-        "deployment/system_definition/someip/radio_service/radio_data_type.json"
-    ],
+    "include":[],
     "package":"srp.apps",
     "someip":{
         "FcRadioService":{

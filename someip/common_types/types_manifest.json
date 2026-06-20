@@ -1,0 +1,13 @@
+{
+    "include": [
+        "deployment/system_definition/someip/common_types/sensor_read_data_type.json",
+        "deployment/system_definition/someip/common_types/servo_data_type.json",
+        "deployment/system_definition/someip/common_types/sys_stat_data_type.json",
+        "deployment/system_definition/someip/common_types/radio_data_type.json",
+        "deployment/system_definition/someip/common_types/bme280_data_type.json",
+        "deployment/system_definition/someip/common_types/lsm6dox_data_type.json",
+        "deployment/system_definition/someip/common_types/gps_data_type.json",
+        "deployment/system_definition/someip/common_types/gps_rmc_data_type.json",
+        "deployment/system_definition/someip/common_types/gps_vtg_data_type.json"
+    ]
+}

@@ -7,7 +7,7 @@
             "major_version":1,
             "minor_version":0,
             "methods":{
-                "OnPrime":{
+                "StartPrime":{
                     "id":1,
                     "data_structure":{
                         "in": {
@@ -18,30 +18,8 @@
                         }
                     }
                 },
-                "OffPrime":{
-                    "id":2,
-                    "data_structure":{
-                        "in": {
-                            "type":"void"
-                        },
-                        "out":{
-                            "type":"bool"
-                        }
-                    }
-                },
-                "StartPrime":{
-                    "id":3,
-                    "data_structure":{
-                        "in": {
-                            "type":"void"
-                        },
-                        "out":{
-                            "type":"bool"
-                        }
-                    }
-                },
                 "GetPrimerState":{
-                    "id":4,
+                    "id":2,
                     "data_structure":{
                         "in": {
                             "type":"void"

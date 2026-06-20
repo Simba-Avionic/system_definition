@@ -8,7 +8,7 @@
             "remrssi": "uint8",
             "txbuf": "uint8",
             "noise": "uint8",
-            "remnoise": "uint8"  
+            "remnoise": "uint8"
         }
     }
 }
