@@ -6,8 +6,7 @@
             "service_id":522,
             "major_version":1,
             "minor_version":0,
-            "methods":{
-            },
+            "methods":{},
             "events":{
                 "NewSystemUsage": {
                     "id":32769,
