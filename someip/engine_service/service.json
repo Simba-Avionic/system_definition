@@ -7,17 +7,6 @@
             "major_version":1,
             "minor_version":0,
             "methods":{
-                "Start":{
-                    "id":1,
-                    "data_structure":{
-                        "in":{
-                            "type":"void"
-                        },
-                        "out":{
-                            "type":"bool"
-                        }
-                    }
-                },
                 "SetMode":{
                     "id":2,
                     "data_structure":{
@@ -28,28 +17,6 @@
                             "type":"bool"
                         }
                     }
-                },
-                "GetMode": {
-                    "id":3,
-                    "data_structure": {
-                        "in":{
-                            "type":"void"
-                        },
-                        "out":{
-                            "type":"uint8"
-                        }
-                    }
-                },
-                "SetVentValve": {
-                    "id":4,
-                    "data_structure": {
-                        "in":{
-                            "type":"uint8"
-                        },
-                        "out":{
-                            "type":"void"
-                        }
-                    }
                 }
             },
             "events":{
@@ -58,22 +25,6 @@
                     "data_structure":{
                         "out":{
                             "type":"uint8"
-                        }
-                    }
-                },
-                "NewVentValveStatus": {
-                    "id":32770,
-                    "data_structure":{
-                        "out":{
-                            "type":"uint8"
-                        }
-                    }
-                },
-                "NewHBStatus": {
-                    "id":32771,
-                    "data_structure":{
-                        "out":{
-                            "type":"uint16"
                         }
                     }
                 }

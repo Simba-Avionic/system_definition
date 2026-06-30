@@ -8,39 +8,6 @@
             "major_version":1,
             "minor_version":0,
             "methods":{
-                "GetTankPressure": {
-                    "id":1,
-                    "data_structure": {
-                        "in":{
-                            "type":"void"
-                        },
-                        "out":{
-                            "type":"uint16"
-                        }
-                    }
-                },
-                "GetUpperTankTemp": {
-                    "id":2,
-                    "data_structure": {
-                        "in":{
-                            "type":"void"
-                        },
-                        "out":{
-                            "type":"uint16"
-                        }
-                    }
-                },
-                "GetLowerTankTemp": {
-                    "id":3,
-                    "data_structure": {
-                        "in":{
-                            "type":"void"
-                        },
-                        "out":{
-                            "type":"uint16"
-                        }
-                    }
-                }
             },
             "events":{
                 "newTempEvent_1": {
@@ -67,19 +34,35 @@
                         }
                     }
                 },
-                "newPressEvent": {
+                "newPressEvent1": {
                     "id":32772,
                     "data_structure":{
                         "out":{
-                            "type":"uint16"
+                            "type":"float32"
                         }
                     }
                 },
-                "newDPressEvent": {
+                "newPressEvent2": {
                     "id":32773,
                     "data_structure":{
                         "out":{
-                            "type":"uint16"
+                            "type":"float32"
+                        }
+                    }
+                },
+                "newPressEvent3": {
+                    "id":32774,
+                    "data_structure":{
+                        "out":{
+                            "type":"float32"
+                        }
+                    }
+                },
+                "newPressEvent4": {
+                    "id":32775,
+                    "data_structure":{
+                        "out":{
+                            "type":"float32"
                         }
                     }
                 },
@@ -104,14 +87,6 @@
                     "data_structure":{
                         "out":{
                             "type":"int16"
-                        }
-                    }
-                },
-                "newTensoEvent": {
-                    "id":32777,
-                    "data_structure":{
-                        "out":{
-                            "type":"float32"
                         }
                     }
                 }
