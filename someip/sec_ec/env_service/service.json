@@ -3,38 +3,14 @@
     ],
     "package":"srp.env",
     "someip":{
-        "EnvApp":{
-            "service_id":514,
+        "SecEnvApp":{
+            "service_id":526,
             "major_version":1,
             "minor_version":0,
             "methods":{
             },
             "events":{
-                "newTempEvent_1": {
-                    "id":32769,
-                    "data_structure":{
-                        "out":{
-                            "type":"int16"
-                        }
-                    }
-                },
-                "newTempEvent_2": {
-                    "id":32770,
-                    "data_structure":{
-                        "out":{
-                           "type":"int16"
-                        }
-                    }
-                },
-                "newTempEvent_3": {
-                    "id":32771,
-                    "data_structure":{
-                        "out":{
-                            "type":"int16"
-                        }
-                    }
-                },
-                "newOxidizerPressEvent": {
+                "newEthanolPressEvent": {
                     "id":32772,
                     "data_structure":{
                         "out":{
@@ -42,7 +18,7 @@
                         }
                     }
                 },
-                "newPressureFeedPressEvent": {
+                "newChamberPressEvent2": {
                     "id":32773,
                     "data_structure":{
                         "out":{
@@ -50,7 +26,7 @@
                         }
                     }
                 },
-                "newChamberPressEvent1": {
+                "newChamberPressEvent3": {
                     "id":32774,
                     "data_structure":{
                         "out":{

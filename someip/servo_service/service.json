@@ -40,7 +40,7 @@
                         }
                     }
                 },
-                "SetEtanolMainValve":{
+                "SetPressureFeedMainValve":{
                     "id":7,
                     "data_structure":{
                         "in":{
@@ -51,7 +51,7 @@
                         }
                     }
                 },
-                "SetEthanolVentValve":{
+                "SetPressureFeedVentValve":{
                     "id":9,
                     "data_structure":{
                         "in":{
@@ -88,7 +88,7 @@
                         }
                     }
                 },
-                "newEthanolMainValveEvent": {
+                "newPressureFeedMainEvent": {
                     "id":32772,
                     "data_structure":{
                         "out":{
@@ -96,7 +96,7 @@
                         }
                     }
                 },
-                "newEthanolVentValveEvent": {
+                "newPressureFeedVentEvent": {
                     "id":32773,
                     "data_structure":{
                         "out":{

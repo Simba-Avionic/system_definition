@@ -1,0 +1,53 @@
+{
+    "include":[],
+    "package":"srp.apps",
+    "someip":{
+        "SecServoService":{
+            "service_id":525,
+            "major_version":1,
+            "minor_version":0,
+            "methods":{
+                "SetEtanolMainValve":{
+                    "id":1,
+                    "data_structure":{
+                        "in":{
+                            "type":"uint8"
+                        },
+                        "out":{
+                            "type":"bool"
+                        }
+                    }
+                },
+                "SetEthanolVentValve":{
+                    "id":2,
+                    "data_structure":{
+                        "in":{
+                            "type":"uint8"
+                        },
+                        "out":{
+                            "type":"bool"
+                        }
+                    }
+                }
+            },
+            "events":{
+                "newEthanolMainValveEvent": {
+                    "id":32769,
+                    "data_structure":{
+                        "out":{
+                            "type":"uint8"
+                        }
+                    }
+                },
+                "newEthanolVentValveEvent": {
+                    "id":32770,
+                    "data_structure":{
+                        "out":{
+                            "type":"uint8"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
