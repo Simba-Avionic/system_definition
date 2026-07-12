@@ -38,7 +38,7 @@
                     "id":32772,
                     "data_structure":{
                         "out":{
-                            "type":"float32"
+                            "type":"int16"
                         }
                     }
                 },
@@ -46,7 +46,7 @@
                     "id":32773,
                     "data_structure":{
                         "out":{
-                            "type":"float32"
+                            "type":"int16"
                         }
                     }
                 },
@@ -54,7 +54,7 @@
                     "id":32774,
                     "data_structure":{
                         "out":{
-                            "type":"float32"
+                            "type":"int16"
                         }
                     }
                 },
