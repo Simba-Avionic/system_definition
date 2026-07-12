@@ -88,7 +88,7 @@
                         }
                     }
                 },
-                "newPressureFeedMainEvent": {
+                "newPressureFeedMainValveEvent": {
                     "id":32772,
                     "data_structure":{
                         "out":{
@@ -96,7 +96,7 @@
                         }
                     }
                 },
-                "newPressureFeedVentEvent": {
+                "newPressureFeedVentValveEvent": {
                     "id":32773,
                     "data_structure":{
                         "out":{
