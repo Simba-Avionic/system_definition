@@ -1,0 +1,34 @@
+{
+    "include":[],
+    "package":"srp.apps",
+    "someip":{
+        "FuelApp":{
+            "service_id":524,
+            "major_version":1,
+            "minor_version":0,
+            "methods": {
+                "Tank": {
+                    "id":1,
+                    "data_structure": {
+                        "in": {
+                            "type":"uint16"
+                        },
+                        "out": {
+                            "type":"bool"
+                        }
+                    }
+                }
+            },
+            "events":{
+                "refuelingStateEvent": {
+                    "id":32769,
+                    "data_structure":{
+                        "out":{
+                            "type":"uint8"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
