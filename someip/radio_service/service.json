@@ -8,7 +8,32 @@
             "service_id":545,
             "major_version":1,
             "minor_version":0,
-            "methods":{},
+            "methods":{
+                "SetGSEOxidizerFillValve":{
+                    "id":1,
+                    "desc": "Controll GSE Main Oxidizer filling valve, 0 - close, 1 - open, 2 - half open",
+                    "data_structure":{
+                        "in": {
+                            "type":"uint8"
+                        },
+                        "out":{
+                            "type":"bool"
+                        }
+                    }
+                },
+                "SetGSEPFSFillValve":{
+                    "id":2,
+                    "desc": "Controll GSE Main Pressure Feed System filling valve, 0 - close, 1 - open, 2 - half open",
+                    "data_structure":{
+                        "in": {
+                            "type":"uint8"
+                        },
+                        "out":{
+                            "type":"bool"
+                        }
+                    }
+                }
+            },
             "events":{
                  "RadioStatusEvent": {
                     "id":32769,
@@ -17,7 +42,34 @@
                             "type":"RadioDataType"
                         }
                     }
-                }
+                 },
+                 "GSEOxidizerTankPressEvent": {
+                    "id":32770,
+                    "desc": "Oxidizer tank pressure in hekto Bar`s (100Bar)",
+                    "data_structure":{
+                        "out":{
+                            "type":"uint16"
+                        }
+                    }
+                 },
+                 "GSERocketMassEvent": {
+                    "id":32771,
+                    "desc": "rocket weight in dag (10g)",
+                    "data_structure":{
+                        "out":{
+                            "type":"int16"
+                        }
+                    }
+                 },
+                 "GSEPressureFeedSystemTankPressEvent": {
+                    "id":32772,
+                    "desc": "Pressure Feed System tank pressure in hekto Bar`s(100Bar)",
+                    "data_structure":{
+                        "out":{
+                            "type":"uint16"
+                        }
+                    }
+                 }
             }
         }
     }
