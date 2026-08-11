@@ -1,0 +1,24 @@
+{
+    "include":[
+    ],
+    "package":"srp.apps",
+    "someip":{
+        "GhApp":{
+            "service_id":520,
+            "major_version":1,
+            "minor_version":0,
+            "methods":{
+            },
+            "events":{
+                "newForceEvent": {
+                    "id":32769,
+                    "data_structure":{
+                        "out":{
+                            "type":"float32"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
