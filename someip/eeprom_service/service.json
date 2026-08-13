@@ -1,0 +1,59 @@
+{
+    "include": [],
+    "package": "srp.mw",
+    "someip": {
+        "EepromService": {
+            "service_id": 560,
+            "major_version": 1,
+            "minor_version": 0,
+            "methods": {
+                "GetConfig": {
+                    "id": 1,
+                    "data_structure": {
+                        "in": {"type": "uint16"},
+                        "out": {"type": "EepromConfigResponse"}
+                    }
+                },
+                "SetConfig": {
+                    "id": 2,
+                    "data_structure": {
+                        "in": {"type": "EepromConfigEntry"},
+                        "out": {"type": "EepromStatusResponse"}
+                    }
+                },
+                "AppendEvent": {
+                    "id": 3,
+                    "data_structure": {
+                        "in": {"type": "EepromEvent"},
+                        "out": {"type": "EepromStatusResponse"}
+                    }
+                }
+            }
+        }
+    },
+    "data_structure": {
+        "EepromConfigEntry": {
+            "key": "uint16",
+            "type": "uint8",
+            "flags": "uint8",
+            "value_length": "uint16",
+            "value": ["uint8", 768]
+        },
+        "EepromConfigResponse": {
+            "status": "uint8",
+            "key": "uint16",
+            "type": "uint8",
+            "flags": "uint8",
+            "value_length": "uint16",
+            "value": ["uint8", 768]
+        },
+        "EepromEvent": {
+            "timestamp": "int64",
+            "event_id": "uint16",
+            "value": "int64"
+        },
+        "EepromStatusResponse": {
+            "status": "uint8"
+        }
+    }
+}
