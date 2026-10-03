@@ -1,0 +1,9 @@
+{
+    "package": "srp.apps",
+    "data_structure": {
+        "RefuelRequestType": {
+            "tank_id": "uint8",
+            "target_value": "uint16"
+        }
+    }
+}
