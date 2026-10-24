@@ -40,6 +40,14 @@
                             "type": "uint8"
                         }
                     }
+                },
+                "gsValveCmdEvent": {
+                    "id": 32770,
+                    "data_structure": {
+                        "out": {
+                            "type": "uint8"
+                        }
+                    }
                 }
             }
         }
