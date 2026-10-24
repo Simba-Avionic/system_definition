@@ -1,0 +1,55 @@
+{
+    "include": [
+        "deployment/system_definition/someip/fuel_service/fuel_data_type.json"
+    ],
+    "package": "srp.apps",
+    "someip": {
+        "FuelService": {
+            "service_id": 524,
+            "major_version": 1,
+            "minor_version": 0,
+            "methods": {
+                "StartRefueling": {
+                    "id": 1,
+                    "data_structure": {
+                        "in": {
+                            "type": "RefuelRequestType"
+                        },
+                        "out": {
+                            "type": "bool"
+                        }
+                    }
+                },
+                "Abort": {
+                    "id": 2,
+                    "data_structure": {
+                        "in": {
+                            "type": "uint8"
+                        },
+                        "out": {
+                            "type": "bool"
+                        }
+                    }
+                }
+            },
+            "events": {
+                "refuelingStateEvent": {
+                    "id": 32769,
+                    "data_structure": {
+                        "out": {
+                            "type": "uint8"
+                        }
+                    }
+                },
+                "gsValveCmdEvent": {
+                    "id": 32770,
+                    "data_structure": {
+                        "out": {
+                            "type": "uint8"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
